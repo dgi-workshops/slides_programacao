@@ -1,0 +1,79 @@
+---
+title: "Workshop Programação R"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: presentation.pptx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  #echo = FALSE,
+  #message = FALSE,
+  warning = FALSE,
+  fig.width = 12,
+  fig.height = 7
+  )
+```
+
+```{r, include=FALSE}
+library(patchwork)
+library(tidyverse)
+library(gridtext)
+```
+
+## Variáveis e Objetos
+O R te permite salvar valores dentro de um objeto. Um objeto é um nome que guarda um valor, por simplicidade vamos usar variável como sinônimo de objeto. Para criar um objeto, utilizamos o operador <- (ou o operador =)
+
+## Definindo Variáveis
+```{r}
+variavel_1 = 2
+print(variavel_1)
+variavel_2 = c(1,2,3,4)
+print(variavel_2)
+```
+
+## Objetos Atômicos
+
+A classe de um objeto é muito importante dentro do R. É a partir dela que as funções e operadores conseguem saber exatamente o que fazer com um objeto.
+
+- Strings/Characters (texto);
+- Integer (número inteiros);
+- Logical/boolean (instrução lógica);
+- Real (números reais);
+- Complex (números complexos)
+
+```{r}
+df = data.frame()
+class(df)
+```
+
+
+## Objetos Multi-dimêncionais
+
+Os principais tipos de objetos multi-dimencionais são:
+
+- matrix (matriz);
+- data.frame (conjunto de dados);
+- array (lista);
+- vector (vetor).
+
+```{r}
+class(variavel_2)
+```
+
+## Convertendo Objetos
+
+```{r}
+variavel_2 = c(1,2,3,4)
+class(variavel_2)
+variavel_2 = as.array(variavel_2)
+class(variavel_2)
+```
+
+```{r}
+num_str = "2"
+class(num_str)
+num = as.numeric(num_str)
+class(num)
+```
