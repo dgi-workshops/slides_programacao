@@ -1,0 +1,50 @@
+---
+title: "Workshop Programação R"
+date: "`r format(Sys.time(), '%d %b %Y')`"
+output:
+  powerpoint_presentation:
+    reference_doc: presentation.pptx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  #echo = FALSE,
+  #message = FALSE,
+  warning = FALSE,
+  fig.width = 12,
+  fig.height = 7
+  )
+```
+
+```{r, include=FALSE}
+library(patchwork)
+library(tidyverse)
+library(gridtext)
+```
+
+## Projetos
+
+Uma funcionalidade muito importante do RStudio é a possibilidade de criar projetos.
+
+Um projeto é uma pasta no seu computador. Nessa pasta, estarão todos os arquivos que você usurá ou criará na sua análise.
+
+A principal razão de utilizarmos projetos é organização. Com eles, fica muito mais fácil importar bases de dados para dentro do R, criar análises reprodutíveis e compartilhar o nosso trabalho.
+
+
+## Rstudio e um projeto
+
+![](img/project_img.png)
+
+## Git {.flexbox .vcenter}
+
+![](img/git_logo.png)
+
+## Github {.flexbox .vcenter}
+
+![](img/github_logo.png)
+
+## Git Pane {.flexbox .vcenter}
+![](img/git_pane.png)
+
+## Git Status {.flexbox .vcenter}
+![](img/git_commit.png)
